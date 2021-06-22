@@ -118,10 +118,22 @@ public class AddressBook
 	
 	public static void main(String[] args)
 	{
-
-		 AddressBook user1 = new  AddressBook();//usecase 1 displainf contact book for user
+		
+		 AddressBook user1 = new  AddressBook();
+		 System.out.println("details of user 1 is");
 		 user1.display();
+		
+		// uc_2  added 2 more  contats in AddressBook
+		 AddressBook user2 = new  AddressBook();
+		 System.out.println("details of user 2 is");
+		 user2.display();
+		
+
+		 AddressBook user3 = new  AddressBook();
+		 System.out.println("details of user 3 is");
+		 user3.display();
+		
+
+
 	}
-				
-}	
 
