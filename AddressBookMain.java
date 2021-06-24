@@ -145,12 +145,13 @@ public class AddressBookMain{
         contactList.removeIf(contactItems -> contactItems.firstName.equals(delete));   
     }
     public void addContactList() {
+	//ability to add multiple persons  by 
         while (true) {
-            System.out.println("Press 0 - Display all contacts");
-            System.out.println("Press 1 - Add contact");
-            System.out.println("Press 2 - Edit contact");
-            System.out.println("press 3 -delete contact");
-            System.out.println("Press 6 - Exit");
+            System.out.println("Press 0 :- Display all contacts");
+            System.out.println("Press 1 :- Add contact");
+            System.out.println("Press 2 :- Edit contact");
+            System.out.println("press 3 :-delete contact");
+            System.out.println("Press 6 :- Exit");
             
             int option = sc.nextInt();
             sc.nextLine();
