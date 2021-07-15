@@ -171,4 +171,21 @@ public class ContactFunctions {
 
 
     }
+    // Get Person Name by State
+    public void getPersonNameByState(String State) {
+        List<ContactItems> list  = contactList.stream().filter(p ->p.getState().equals(State)).collect(Collectors.toList());
+        for(ContactItems contact: list){
+            System.out.println("First Name: "+contact.getFirstName());
+            System.out.println("Last Name: "+contact.getLastName());
+        }
+
+    }
+    // Get Person Name by city
+    public void getPersonNameByCity(String cityName) {
+        List<ContactItems> list  = contactList.stream().filter(p ->p.getCity().equals(cityName)).collect(Collectors.toList());
+        for(ContactItems contact: list){
+            System.out.println("First Name: "+contact.getFirstName());
+            System.out.println("Last Name: "+contact.getLastName());
+        }
+    }
 }
