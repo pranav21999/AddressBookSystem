@@ -79,6 +79,25 @@ class AddressBookMain {
 		}
 
 	}
+	private void searchPersonByState(String stateName) {
+		// search person by their State
+	for (Map.Entry<String, ContactFunctions> entry : addressBookListMap.entrySet()) {
+			ContactFunctions value = entry.getValue();
+			System.out.println("The Address Book: " + entry.getKey());
+			value.getPersonNameByState(stateName);
+		}
+	}
+
+	private void searchPersonByCity(String cityName) {
+		// Search person by their  city
+		for (Map.Entry<String, ContactFunctions> entry : addressBookListMap.entrySet()) {
+			ContactFunctions value = entry.getValue();
+			System.out.println("The Address Book: " + entry.getKey());
+			value.getPersonNameByCity(cityName);
+		}
+	}
+
+
 	//main method 
 	public static void main(String[] args) {
 		AddressBookMain addressBookMain = new AddressBookMain();
@@ -107,6 +126,23 @@ class AddressBookMain {
 					System.out.println("Address Book Name: " + entry.getKey());
 					value.checkDuplicate();
 				}
+			case 3:
+				System.out.println("Enter Name of City: ");
+				String CityName = sc.next();
+				addressBookMain.searchPersonByCity(CityName);
+				break;
+
+			case 4: {
+				System.out.println("Enter Name of State: ");
+				String StateName = sc.next();
+				addressBookMain.searchPersonByState(StateName);
+				break;
+			}
+
+			case 5:
+				flag = false;
+				break;
+			}
 		}
 	}
 
